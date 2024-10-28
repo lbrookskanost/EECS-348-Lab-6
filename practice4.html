@@ -1,0 +1,67 @@
+<?php
+$number = null;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $number = intval($_POST['number']);
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+th, td {
+	border: 1px solid FireBrick;
+	padding: 10px;
+	text-align: center;
+  	background-color: white;
+}
+
+* {
+	font-family: "Courier New", Monaco, monospace;
+}
+	
+h1 {
+	color: FireBrick;
+}
+
+body {
+	background-color: rgba(0, 81, 186, 0.6);
+}
+
+</style>
+</head>
+<body>
+
+<h1>EECS 348 Lab 6, Practice 4</h1>
+<form method="POST" action="">
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" name="number" required>
+    <button type="submit">Generate Table</button>
+</form>
+
+<?php if ($number !== null): ?>
+    <table>
+        <tr>
+            <th>x</th>
+            <?php for ($i = 1; $i <= $number; $i++): ?>
+                <th><?php echo $i; ?></th>
+            <?php endfor; ?>
+        </tr>
+        <?php for ($j = 1; $j <= $number; $j++): ?>
+            <tr>
+                <th><?php echo $j; ?></th>
+                <?php for ($k = 1; $k <= $number; $k++): ?>
+                    <td><?php echo $j * $k; ?></td>
+                <?php endfor; ?>
+            </tr>
+        <?php endfor; ?>
+    </table>
+<?php endif; ?>
+
+</body>
+</html>

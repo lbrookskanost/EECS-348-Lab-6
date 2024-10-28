@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="practice2.js" defer></script>
+<style>
+h1 {
+	color: FireBrick;
+}
+
+* {
+	font-family: "Courier New", Monaco, monospace;
+
+}
+
+.paragraph{
+	border-style: solid;
+	border-width: 5px;
+}
+body {
+	background-color: rgba(0, 81, 186, 0.6);
+}
+
+</style>
+</head>
+<body>
+
+<h1> EECS 348 Lab 6, Practice 2 </h1>
+<div id="paragraph" class="paragraph">
+	<p> Paragraph to be altered. </p>
+</div>
+<form>
+	<label for="borderR"> Border R (0-255):</label>
+	<input type="text" id="borderR" name="borderR"><br>
+
+	<label for="borderG"> Border G (0-255):</label>
+	<input type="text" id="borderG" name="borderG"><br>
+
+	<label for="borderB"> Border B (0-255):</label>
+	<input type="text" id="borderB" name="borderB"><br>
+	
+	<label for="borderwidth"> Border Width:</label>
+	<input type="text" id="borderwidth" name="borderwidth"><br>
+
+	<label for="backgroundR"> Background R (0-255):</label>
+	<input type="text" id="backgroundR" name="backgroundR"><br>
+	
+	<label for="backgroundG"> Background G (0-255):</label>
+	<input type="text" id="backgroundG" name="backgroundG"><br>
+
+	<label for="backgroundB"> Background B (0-255):</label>
+	<input type="text" id="backgroundB" name="backgroundB"><br>
+
+	<input type="button" id="submit" value="Change the color!">
+</form>
+</body>
+</html>
